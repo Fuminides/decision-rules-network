@@ -36,7 +36,7 @@ for rule in rules:
             condition = condition[0]
         unique_conditions.add(condition)
 
-compelxity_score = np.log(len(rules) + len(average_rule_length) + len(unique_conditions))
+compelxity_score = np.log(len(rules) + average_rule_length + len(unique_conditions))
 print(f'Complexity score: {compelxity_score}')
 print(f'Number of unique conditions: {len(unique_conditions)}')    
 print(f'Average rule length: {average_rule_length}')
@@ -49,5 +49,6 @@ res = pd.DataFrame(
      'Number of unique conditions': [len(unique_conditions)],
      'Number of rules': [len(rules)]},
     index=[name])
+
 res.to_csv('results_' + name + '.csv', sep=';')
 
