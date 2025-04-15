@@ -50,5 +50,5 @@ res = pd.DataFrame(
      'Number of rules': [len(rules)]},
     index=[name])
 
-res.to_csv('results_' + name + '.csv', sep=';')
+res.to_csv('results/results_' + name + '.csv', sep=';')
 
